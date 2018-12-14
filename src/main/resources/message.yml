@@ -1,0 +1,8 @@
+Message:
+  MonitForgeExp: "&f[&c行为记录&f] 玩家 &e%player% &f的锻造经验增加了 &e%amount%"
+  ForgeSuccess: '&a锻造成功'
+  ForgeExpNotEnough: "&a你的锻造经验只有 %old%, 锻造这个需要 %require% 点"
+  ForgeExpMax: "&c你锻造等级已经达到满级了，不再增加经验"
+  ForgeExpAdd: "&a恭喜你锻造经验增加了"
+  AddPoint: "&a玩家 %player% 收到了 %amount% 锻造经验"
+  NotCorrectMaterial: '&c放入物品材料不对'

@@ -1,0 +1,7 @@
+name: Forge
+version: ${project.version}
+main: org.sct.forge.Forge
+depend: [SCT_Core]
+authors: [SCT_Alchemy]
+description: a spigot plugin that can use custom item to forge weapon
+website: www.south157.cn
