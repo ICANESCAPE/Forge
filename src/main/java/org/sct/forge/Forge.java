@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import org.sct.core.Core;
+import org.sct.forge.command.ForgeCommands;
 import org.sct.forge.dao.BasicDao;
 import org.sct.forge.file.Config;
 import org.sct.forge.file.Message;
@@ -37,8 +38,9 @@ public final class Forge extends JavaPlugin {
             String username = getConfig().getString("Mysql.User");
             String password = getConfig().getString("Mysql.PassWord");
             String tablename = getConfig().getString("Mysql.Table");
+            Bukkit.getConsoleSender().sendMessage("测试一下" + host + password);
             String ip = "jdbc:mysql://" + host + ":" + port + "/" + dbname + "?useUnicode=true&characterEncoding=utf8&autoReconnect=true";
-            String sql = "CREATE TABLE  IF NOT EXISTS `" + tablename +"` (\n" +
+            String sql = "CREATE TABLE  IF NOT EXISTS `drawing` (\n" +
                     "  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,\n" +
                     "  `name` text,\n" +
                     "  `exp` int(11) DEFAULT '0',\n" +
@@ -54,6 +56,7 @@ public final class Forge extends JavaPlugin {
         Message.reload();
         Config.reload();
         EventUtil.register();
+        Bukkit.getPluginCommand("forge").setExecutor(new ForgeCommands());
         info("&f[&eForge锻造&f] &6> &f加载完成");
         info("&aplugin by Server CT");
     }

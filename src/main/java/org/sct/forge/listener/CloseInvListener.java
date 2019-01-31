@@ -24,9 +24,15 @@ public class CloseInvListener implements Listener {
                 if(i != 35 && e.getInventory().getItem(i) != null && !e.getInventory().getItem(i).getItemMeta().equals(Material.AIR)) {
                     ItemStack item = e.getInventory().getItem(i);
                     items[i] = item;
-                }
+                } else { }
             }
-            player.getInventory().addItem(items);
+            if (items == null || items.length == 0) {
+                return;
+            } else {
+                player.sendMessage(items.length + "");
+                player.sendMessage("" + items[0].toString());
+                player.getInventory().addItem(items);
+            }
         }
     }
 }

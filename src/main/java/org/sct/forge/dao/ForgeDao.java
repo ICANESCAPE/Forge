@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 
 public class ForgeDao {
 
-    private static String monit = ForgeUtil.getString(Message.getMonitForgeExp());
+    private static String monit = ForgeUtil.getString( Message.getMonitForgeExp());
 
     public static boolean hasData(String name) {
         Connection connection = null;

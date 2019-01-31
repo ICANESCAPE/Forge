@@ -22,7 +22,7 @@ public class Config extends FileUtil {
     @Getter
     private static List<ForgeData> data = new ArrayList<>();
 
-    public Config() { super(Forge.getInstance(), "forge.yml"); }
+    public Config() { super(Forge.getInstance(), "config.yml"); }
 
     public static void reload() { config = new Config(); }
 

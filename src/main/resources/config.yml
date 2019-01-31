@@ -1,3 +1,10 @@
+Mysql:
+  Host: 127.0.0.1
+  Port: 3306
+  User: root
+  Password: Alchemy
+  DataBase: mc_nancheng
+
 MaxExp: 1000
 confirm: 'confirm'
 

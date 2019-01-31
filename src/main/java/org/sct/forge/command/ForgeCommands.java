@@ -22,9 +22,17 @@ public class ForgeCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (args.length == 0) {
+            sender.sendMessage(ForgeUtil.getString("&a/forge open 打开GUI"));
+            sender.sendMessage(ForgeUtil.getString("&a/forge add 玩家 数量 增加经验点"));
+            sender.sendMessage(ForgeUtil.getString("&a/forge reload 重载"));
+            return false;
+        }
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            GuiBuilder.openSelectInv(player);
+            if (args[0].equalsIgnoreCase("open")) {
+                GuiBuilder.openSelectInv(player);
+            }
         } else {
             Forge.info("&c这个指令只有玩家可以使用");
         }
